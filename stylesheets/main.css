@@ -1,0 +1,17 @@
+body{
+	font-family: 'Source Sans Pro', sans-serif;
+}
+.head{
+	background-color: #4da6ff;
+	height:75%;
+	font-size: 70px;
+	padding:20%;
+}
+.foot{
+	padding-top:5px;
+	text-align: center;
+	padding-right:10%;
+}
+button{
+	margin:10px;
+}
