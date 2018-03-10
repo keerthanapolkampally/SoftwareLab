@@ -1,22 +1,31 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <title>{% block title %}Login and signup{% endblock %}</title>
+    <title>WDS</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'index.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet"> 
   </head>
   <body>
-    <header>
-      <h1>Work Distribution System</h1>
-      {% if user.is_authenticated %}
-        <a href="{% url 'logout' %}">logout</a>
-      {% else %}
-        <a href="{% url 'login' %}">login</a> / <a href="{% url 'signup' %}">signup</a>
-      {% endif %}
-      <hr>
-    </header>
-    <main>
-      {% block content %}
-      {% endblock %}
-    </main>
+    <div class="col-sm-2"></div>
+    <div class="jumbotron col-sm-">
+      <header>
+        <h1>Work Distribution System</h1>
+        {% if user.is_authenticated %}
+          <a href="{% url 'logout' %}">logout</a>
+        {% else %}
+          <a href="{% url 'login' %}">login</a> / <a href="{% url 'signup' %}">signup</a>
+        {% endif %}
+        <hr>
+      </header>
+      <div class="col-sm-4"></div>
+      <main class="col-sm-4">
+        {% block content %}
+        {% endblock %}
+      </main>
+    </div>
   </body>
 </html>
