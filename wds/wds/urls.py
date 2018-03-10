@@ -1,5 +1,5 @@
-"""wds URL Configuration
 
+"""wds URL Configuration
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/2.0/topics/http/urls/
 Examples:
@@ -13,10 +13,18 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+
+from django.conf.urls import url, include
+from django.contrib.auth import views as auth_views
 from django.contrib import admin
-from django.urls import path,include
+
+from index import views as index_views
+
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path(r'',include('index.urls')),
+    url(r'^admin/', include(admin.site.urls)),
+    url(r'^$', index_views.home, name='home'),
+    url(r'^login/$', auth_views.login, {'template_name': 'login.html'}, name='login'),
+    url(r'^logout/$', auth_views.logout, {'next_page': 'login'}, name='logout'),
+    url(r'^signup/$', index_views.signup, name='signup'),
 ]

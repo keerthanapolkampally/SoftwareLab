@@ -1,7 +1,7 @@
-from django.contrib import admin
-from django.urls import path,include
-from . import views
+ffrom django.conf.urls import url
+from . import views as index_views
 
 urlpatterns = [
-    path(r'',views.index,name="index"),
+    ...
+    url(r'^signup/$', index_views.signup, name='signup'),
 ]
