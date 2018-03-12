@@ -1,0 +1,46 @@
+body{
+    font-family: 'Source Sans Pro', sans-serif;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+button{
+    padding: 5px;
+    background-color: rgb(75,75,75);
+    color:white;
+    margin: 50px 50px 50px 0px;
+    box-shadow: 0 9px #999;
+    border-radius: 10px;
+    width:200px;
+}
+button:hover{
+    background-color: rgb(100,100,100);
+}
+button:active{
+    background-color: rgb(100,100,100);
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+.date{
+    float:right;
+}
