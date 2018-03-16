@@ -11,14 +11,14 @@
     <script type="text/javascript" src="{% static 'javascripts/nav.js' %}"></script>
   </head>
   <body>
-  	<ul>
-  		<li><a class="active" href="#home">Home</a></li>
-  		<li><a href="#profile">Profile</a></li>
-  		<li><a href="#project">Projects</a></li>
-  		<li><a href="{% url 'logout' %}">Logout</a></li>
-  		<li id="date"></li>
+  	<ul class="nav">
+  		<li class="listnav"><a class="active" href="{% url 'home' %}">Home</a></li>
+  		<li class="listnav"><a href="#profile">Profile</a></li>
+  		<li class="listnav"><a href="{% url 'project:proj' %}">Projects</a></li>
+  		<li class="listnav"><a href="{% url 'logout' %}">Logout</a></li>
+  		<li class="listnav" id="date"></li>
 	</ul>
 	{% block content %}
-    {% endblock %}
+  {% endblock %}
 </body>
 </html>

@@ -1,0 +1,14 @@
+{% extends 'nav.html' %}
+{% block content %}
+<ul>
+	{% for x in all_projects %}
+	<h3>{{x.project_name}}</h3>
+	<h4>{{x.team_leader}}</h4>
+	<ul>
+		{% for y in x.employee.all %}
+		<li>{{y.user}}</li>
+		{% endfor %}
+	</ul>
+	{% endfor %}
+</ul>
+{% endblock %}

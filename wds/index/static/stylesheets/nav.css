@@ -1,7 +1,11 @@
 body{
     font-family: 'Source Sans Pro', sans-serif;
+    background-image: url(https://www.xmple.com/wallpaper/gradient-white-grey-linear-1920x1080-c2-a9a9a9-ffffff-a-210-f-14.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
-ul {
+.nav {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -9,7 +13,7 @@ ul {
     background-color: #333;
 }
 
-li {
+.listnav {
     float: left;
 }
 
@@ -24,7 +28,7 @@ li a {
 li a:hover {
     background-color: #111;
 }
-button{
+button,.btn{
     padding: 5px;
     background-color: rgb(75,75,75);
     color:white;
@@ -37,6 +41,14 @@ button:hover{
     background-color: rgb(100,100,100);
 }
 button:active{
+    background-color: rgb(100,100,100);
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+.btn:hover{
+    background-color: rgb(100,100,100);
+}
+.btn:active{
     background-color: rgb(100,100,100);
     box-shadow: 0 5px #666;
     transform: translateY(4px);

@@ -1,6 +1,5 @@
 {% extends 'nav.html' %}
-
 {% block content %}
   <h2>Welcome, {{ user.username }}!</h2>
-  <button>Create Project</button>
+  <a href="{% url 'project:add' %}"><button>Create Project</button></a>
 {% endblock %}
