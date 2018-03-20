@@ -1,0 +1,10 @@
+{% extends 'nav.html' %}
+{%block content %}
+{{user.username}}<br>
+{{user.profile.first_name}}<br>
+{{user.profile.last_name}}<br>
+{{user.profile.bio}}<br>
+{{user.profile.birth_date}}<br>
+{{user.profile.email_id}}<br>
+<button>Update Profile</button>
+{% endblock %}
