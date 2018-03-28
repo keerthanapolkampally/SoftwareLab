@@ -28,4 +28,5 @@ urlpatterns = [
     url(r'^signup/$', index_views.signup, name='signup'),
     url(r'^project/',include('project.urls')),
     url(r'^profile/$', index_views.get_profile, name='ownprofile'),
+    url(r'^profile/$', index_views.get_profile, name='ownprofile'),
 ]

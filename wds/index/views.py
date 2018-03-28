@@ -37,3 +37,7 @@ def get_profile(request):
     current_id = current.id
     current_user = User.objects.get(id = current_id)
     return render(request,'profile.html', {'user' : current_user})
+
+def get_profile(request,pk):
+    current_user = User.objects.get(id = pk)
+    return render(request,'profile.html', {'user' : current_user})

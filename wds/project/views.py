@@ -11,3 +11,7 @@ class ProjectCreate(CreateView):
 	model = project
 	template_name = "projform.html"
 	fields = ['project_name', 'team_leader','employee']
+
+def details(request,pk):
+	detail = project.objects.get(pk=pk)
+	return render(request,'details.html',{'detail' : detail})
