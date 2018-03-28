@@ -27,6 +27,5 @@ urlpatterns = [
     url(r'^logout/$', auth_views.logout, {'next_page': 'login'}, name='logout'),
     url(r'^signup/$', index_views.signup, name='signup'),
     url(r'^project/',include('project.urls')),
-    url(r'^profile/$', index_views.get_profile, name='ownprofile'),
-    url(r'^profile/$', index_views.get_profile, name='ownprofile'),
+    url(r'^profile/(?P<user_id>[0-9]+)/$', index_views.get_profile, name='ownprofile'),
 ]
