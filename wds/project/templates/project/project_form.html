@@ -1,0 +1,8 @@
+{% extends 'nav.html' %}
+{%block content %}
+<form class="form-horizontal" action="" method="post" enctype="multipart/form-data">
+	{% csrf_token %}
+	{% include 'form-template.html' %}
+	<button type="submit" class="btn btn-success">Submit</button>
+</form>
+{% endblock %}
