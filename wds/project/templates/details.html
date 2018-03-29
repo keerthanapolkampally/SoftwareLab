@@ -3,7 +3,7 @@
 <h3><a href = '/project/{{detail.id}}'>{{detail.project_name}}</a></h3>
 	<ul>
 		{% for y in detail.employee.all %}
-			<li>{{y.user.username}}</li>
+			<li><a href="/profile/{{y.user.id}}">{{y.user.username}}</a></li>
 		{% endfor %}
 	</ul>
 {% endblock %}

@@ -32,12 +32,6 @@ def signup(request):
         form = SignUpForm()
     return render(request, 'signup.html', {'form': form})
 
-'''def get_profile(request):
-    current = request.user
-    current_id = current.id
-    current_user = User.objects.get(id = current_id)
-    return render(request,'profile.html', {'user' : current_user})'''
-
 def get_profile(request,user_id):
     current_user = User.objects.get(id = user_id)
     return render(request,'profile.html', {'user' : current_user})
