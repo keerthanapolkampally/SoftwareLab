@@ -1,0 +1,10 @@
+{% extends 'nav.html' %}
+{% block content %}
+<ul>
+	{% for x in all_project %}
+	<li>
+	<h3><a href = '/project/{{x.id}}'>{{x.project_name}}</a></h3>
+	{% endfor %}
+</li>
+</ul>
+{% endblock %}
