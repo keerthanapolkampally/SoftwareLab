@@ -1,5 +1,6 @@
 {% extends 'nav.html' %}
 {% block content %}
-  <h2>Welcome, {{ user.username }}!</h2>
+<br><br><br>
+  <h2 class="row-sm-offset-4">Welcome, {{ user.username }}!</h2>
   <a href="{% url 'project:add' %}"><button>Create Project</button></a>
 {% endblock %}

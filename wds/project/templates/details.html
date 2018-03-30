@@ -1,11 +1,15 @@
 {% extends 'nav.html' %}
 {% block content %}
-<h3><a href = '/project/{{detail.id}}'>{{detail.project_name}}</a></h3>
-<h3><a href = '/project/{{detail.id}}'>{{detail.start_date}}</a></h3>
-<h3><a href = '/project/{{detail.id}}'>{{detail.end_date}}</a></h3>
+<br>
+<h2>{{detail.project_name}}</h2><br>
+<div class="col-sm-offset-5 col-sm-8">
+Start Date: {{detail.start_date}}<br>
+End Date : {{detail.end_date}}<br>
+Employees :<br>
 	<ul>
 		{% for y in detail.employee.all %}
 			<li><a href="/profile/{{y.user.id}}" >{{y.user.username}}</a></li>
 		{% endfor %}
 	</ul>
+</div>
 {% endblock %}

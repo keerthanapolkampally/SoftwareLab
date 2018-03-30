@@ -1,5 +1,5 @@
 body{
-    font-family: 'Times New Roman', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
     background-image: url(https://www.xmple.com/wallpaper/linear-gradient-cyan-brown-highlight-1920x1080-c2-344b47-fff8dc-l-67-a-225-f-21.svg);
     /*background-size: cover;*/
     background-repeat: no-repeat;
@@ -22,7 +22,7 @@ body{
     float: left;
 }
 
-li a {
+li.listnav a{
     display: block;
     color: black;
     text-align: center;
@@ -30,9 +30,11 @@ li a {
     text-decoration: none;
     font-size: 25px;
 }
-
-li a:hover {
-    background-color: black;
+a{
+  color: black;  
+}
+li.listnav a:hover {
+    background-color: white;
 }
 button,.btn{
     padding: 5px;
@@ -65,4 +67,9 @@ button:active{
 }
 .date{
     float:right;
+}
+h2{
+    text-align: center;
+    position: center;
+    font-size: 70px;
 }

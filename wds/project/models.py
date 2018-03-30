@@ -1,6 +1,6 @@
 from django.db import models
 from index.models import Profile
-from django.core.urlresolvers import reverse
+from django.urls import reverse
 import datetime
 
 class project(models.Model):

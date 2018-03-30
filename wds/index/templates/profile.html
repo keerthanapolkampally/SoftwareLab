@@ -1,15 +1,16 @@
 {% extends 'nav.html' %}
 {%block content %}
-{{user.username}}<br>
-{{user.profile.first_name}}<br>
-{{user.profile.last_name}}<br>
-{{user.profile.bio}}<br>
-{{user.profile.birth_date}}<br>
-{{user.profile.email_id}}<br>
+<br><br><br>
+<h2>Hello {{user.username}}</h2>
+<div class="col-sm-offset-5 col-sm-8">
+Username : {{user.username}}<br>
+First Name : {{user.first_name}}<br>
+Last Name : {{user.last_name}}<br>
 <p>Projects</p><br>
 <ul>
 {% for x in user.profile.project_set.all %}
 	<li><a href="/project/{{x.id}}">{{x.project_name}}</a></li>
 {% endfor %}
 </ul>
+</div>
 {% endblock %}
