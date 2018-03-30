@@ -1,9 +1,11 @@
 {% extends 'nav.html' %}
 {% block content %}
 <h3><a href = '/project/{{detail.id}}'>{{detail.project_name}}</a></h3>
+<h3><a href = '/project/{{detail.id}}'>{{detail.start_date}}</a></h3>
+<h3><a href = '/project/{{detail.id}}'>{{detail.end_date}}</a></h3>
 	<ul>
 		{% for y in detail.employee.all %}
-			<li><a href="/profile/{{y.user.id}}">{{y.user.username}}</a></li>
+			<li><a href="/profile/{{y.user.id}}" >{{y.user.username}}</a></li>
 		{% endfor %}
 	</ul>
 {% endblock %}

@@ -1,9 +1,12 @@
 from django.db import models
 from index.models import Profile
-from django.urls import reverse
+from django.core.urlresolvers import reverse
+import datetime
 
 class project(models.Model):
 	project_name = models.CharField(max_length=100)
+	start_date = models.DateField(default=datetime.date.today)
+	end_date = models.DateField(default=datetime.date.today)
 	#team_leader = models.ForeignKey(Profile, on_delete = models.PROTECT)
 	employee = models.ManyToManyField(Profile, blank = True, null = True)
 

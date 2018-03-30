@@ -9,7 +9,7 @@ def proj(request):
 
 class ProjectCreate(CreateView):
 	model = project
-	fields = ['project_name','employee']
+	fields = ['project_name','employee','start_date','end_date']
 
 def details(request,pk):
 	detail = project.objects.get(pk=pk)
